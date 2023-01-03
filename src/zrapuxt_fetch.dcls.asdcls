@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access Control for Salary'
+@MappingRole: true
+define role ZRAPUXT_FETCH {
+    grant 
+        select
+            on
+                ZI_RAPUXT_5559
+                    where
+                        (Salary) = aspect pfcg_auth(ZRAPUXT_AO, ZRAPUXT_AF);
+                        
+}

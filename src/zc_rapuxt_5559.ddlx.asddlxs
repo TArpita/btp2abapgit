@@ -1,0 +1,60 @@
+@Metadata.layer: #CORE
+@UI : {
+headerInfo : { typeName: 'UX Team',
+               typeNamePlural: 'UX Team',
+               title : { type: #STANDARD, label: 'UXTeam', value: 'Id'} },
+               presentationVariant: [{sortOrder: [{ by: 'Id',  direction: #ASC}] }]
+}
+annotate view ZC_RAPUXT_5559 with
+{
+
+  @UI.facet: [{ id: 'UXdemo', 
+                purpose: #STANDARD, 
+                type: #IDENTIFICATION_REFERENCE, 
+                label: 'UXTeam', 
+                position: 10 }]
+                
+  @UI : { identification: [{position: 1, label: 'Id' }]}
+  Id;
+  
+  @UI : { identification: [{ position: 20}],
+          lineItem: [{ position: 20 }],
+          selectionField: [ {position: 20 }]
+        }
+  Firstname;
+  
+   @UI : { identification: [{ position: 30}],
+           lineItem: [{ position: 30 }],
+           selectionField: [ {position: 30 }]
+        }
+  Lastname;
+  
+   @UI : { identification: [{ position: 40}],
+           lineItem: [{ position: 40 }]
+        }
+  Age;
+  
+   @UI : { identification: [{ position: 50}],
+           lineItem: [{ position: 50 }]   
+        }
+  Role;
+  
+   @UI : { identification: [{ position: 60}],
+           lineItem: [{ position: 60 }],
+           selectionField: [ {position: 60 }]
+        }
+  Salary;
+  
+   @UI: {  lineItem:       [ { position: 70 }, 
+           { type: #FOR_ACTION, dataAction: 'setActive', label: 'Set Active' } ],
+           identification: [ { position: 70 }, 
+           { type: #FOR_ACTION, dataAction: 'setActive', label: 'Set Active' } ] }
+  Active;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+}

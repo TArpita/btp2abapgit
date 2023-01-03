@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for UXT_5559'
+define service Z_expose_uxt_5559 {
+  expose ZC_RAPUXT_5559 as UXTeam;
+}
